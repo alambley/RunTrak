@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RunTrak</string>
+    <string name="title_activity_title_screen">TitleScreen</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
