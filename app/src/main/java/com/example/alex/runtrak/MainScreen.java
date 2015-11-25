@@ -67,6 +67,20 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        free.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
+
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), History.class));
+            }
+        });
+
         saveFile = new File(getApplicationContext().getFilesDir(), "savefile");
         allRunData = ((RunData) getApplicationContext());
         if(allRunData.getHoldRuns() == null){

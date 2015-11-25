@@ -3,6 +3,7 @@ package com.example.alex.runtrak;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.preference.DialogPreference;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -91,9 +92,23 @@ public class HistoryMore extends AppCompatActivity {
         }
 
         showDate.setText(showThisData.getDate());
+        showDate.setTextColor(Color.parseColor("#fcffffff"));
+        showDate.setTextSize(25);
+
         showStart.setText(showThisData.getStartTime());
+        showStart.setTextColor(Color.parseColor("#fcffffff"));
+        showStart.setTextSize(25);
+
         showDistance.setText(showThisData.getNeatDistance() + " Miles");
+        showDistance.setTextColor(Color.parseColor("#fcffffff"));
+        showDistance.setTextSize(25);
+
         showTime.setText(showThisData.getNeatTime());
+        showTime.setTextColor(Color.parseColor("#fcffffff"));
+        showTime.setTextSize(25);
+
         showPace.setText(showThisData.getNeatPace());
+        showPace.setTextColor(Color.parseColor("#fcffffff"));
+        showPace.setTextSize(25);
     }
 }

@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     Run tempRun;
     LocationManager locationManager;
-    TextView showdistance,showsize,showtime,showpace,showtestpace,GOAL,DIFFY;
+    TextView showdistance,showsize,showtime,showpace,showtestpace,GOAL,DIFFY,Inspire;
     SharedPreferences prefs;
     Boolean go, done;
     File saveFile;
@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         showtestpace = (TextView) findViewById(R.id.textView15);
         GOAL = (TextView) findViewById(R.id.textView19);
         DIFFY = (TextView) findViewById(R.id.textView20);
+        Inspire = (TextView) findViewById(R.id.textView21);
 
         allRunData = ((RunData) getApplicationContext());
 
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             showtestpace.setText("");
             GOAL.setText("");
             DIFFY.setText("");
+            Inspire.setText("");
         }else{
             showpace.setText(Double.toString(allRunData.getPaceToRun()));
         }
@@ -144,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 PrintWriter writer = new PrintWriter(saveFile);
                 writer.write(json);
                 writer.close();
+                Toast.makeText(getApplicationContext(), "Saved Run in History", Toast.LENGTH_SHORT).show();
             }catch(IOException f){
                 Toast.makeText(getApplicationContext(), "Save failed!", Toast.LENGTH_SHORT).show();
             }
@@ -175,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
                 PrintWriter writer = new PrintWriter(saveFile);
                 writer.write(json);
                 writer.close();
+                Toast.makeText(getApplicationContext(), "Saved Run in History", Toast.LENGTH_SHORT).show();
             }catch(IOException f){
                 Toast.makeText(getApplicationContext(), "Save failed!", Toast.LENGTH_SHORT).show();
             }
@@ -201,8 +205,11 @@ public class MainActivity extends AppCompatActivity {
             showtestpace.setText(ayy);
             if(test >= 0){
                 showtestpace.setTextColor(Color.parseColor("#00FF00"));
-            }else{
+                Inspire.setText("KEEP UP THE PACE");
+            }
+            else{
                 showtestpace.setTextColor(Color.parseColor("#FF0000"));
+                Inspire.setText("SPEED UP");
             }
         }
     }

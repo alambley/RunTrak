@@ -33,6 +33,7 @@ public class RunListAdapter extends ArrayAdapter<Run> {
                 LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
                 v = inflater.inflate(layoutResourceId, null);
+               // v = inflater.inflate(R.layout.list_layout,null);
 
             } else {
                 v = convertView;
