@@ -14,7 +14,7 @@
         android:gravity="center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="00:00:00"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textColor="#fcffffff"
         android:id="@+id/textView"
         android:editable="false"
@@ -22,14 +22,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button" />
+        android:layout_toEndOf="@+id/button"
+        android:layout_toRightOf="@+id/button" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:gravity="center_vertical"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0.00"
         android:textColor="#fcffffff"
@@ -39,8 +39,8 @@
         android:layout_below="@+id/textView"
         android:layout_alignRight="@+id/textView"
         android:layout_alignEnd="@+id/textView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,16 +48,16 @@
         android:gravity="center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="00.00"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:id="@+id/textView3"
         android:editable="false"
         android:textColor="#fcffffff"
         android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
         android:layout_marginTop="40dp"
         android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_alignLeft="@+id/textView15"
+        android:layout_alignStart="@+id/textView15" />
 
     <Button
         android:textAllCaps="false"
@@ -81,15 +81,15 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="00.00"
         android:id="@+id/textView4"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:editable="false"
         android:textColor="#fcffffff"
         android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3"
         android:layout_marginTop="40dp"
         android:layout_alignRight="@+id/textView3"
-        android:layout_alignEnd="@+id/textView3" />
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignLeft="@+id/textView15"
+        android:layout_alignStart="@+id/textView15" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
         android:gravity="center_vertical"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="00.00"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textColor="#fcffffff"
         android:id="@+id/textView15"
         android:editable="false"

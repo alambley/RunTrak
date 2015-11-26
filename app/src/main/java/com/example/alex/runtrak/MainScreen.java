@@ -70,6 +70,7 @@ public class MainScreen extends AppCompatActivity {
         free.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                allRunData.setPaceToRun(0);
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });

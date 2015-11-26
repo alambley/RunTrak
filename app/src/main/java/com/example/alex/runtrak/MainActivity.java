@@ -200,9 +200,15 @@ public class MainActivity extends AppCompatActivity {
         showdistance.setText(tempRun.getNeatPace());
         if(allRunData.getPaceToRun() != 0){
             double test = ((allRunData.getPaceToRun() - tempRun.getPace()) / allRunData.getPaceToRun()) * 100;
-            String ayy = String.format("%.1f", test);
-            ayy = ayy.concat("%");
-            showtestpace.setText(ayy);
+            if(test > 1000){
+                showtestpace.setText("1000%+");
+            }else if(test < -1000){
+                showtestpace.setText("-1000%+");
+            }else{
+                String ayy = String.format("%.1f", test);
+                ayy = ayy.concat("%");
+                showtestpace.setText(ayy);
+            }
             if(test >= 0){
                 showtestpace.setTextColor(Color.parseColor("#00FF00"));
                 Inspire.setText("KEEP UP THE PACE");
@@ -216,7 +222,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onPause() {
-        allRunData.setPaceToRun(0);
         super.onPause();
     }
 }
