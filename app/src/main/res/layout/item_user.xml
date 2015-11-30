@@ -11,6 +11,7 @@
         android:text="Large Text"
         android:gravity="center"
         android:background="@drawable/border"
-        android:id="@+id/runInfo" />
+        android:id="@+id/runInfo"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
